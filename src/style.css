@@ -16,7 +16,8 @@ body {
     serif;
 }
 
-button {
+button,
+input {
   font: inherit;
 }
 
@@ -92,9 +93,11 @@ h2 {
 }
 
 .form-heading p,
+label,
 footer,
 .output-label,
-.placeholder {
+.placeholder,
+.examples {
   font-family: Arial, sans-serif;
 }
 
@@ -102,6 +105,41 @@ footer,
   margin-bottom: 0;
   color: #65716f;
   line-height: 1.45;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2f403d;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #cfd8d5;
+  border-radius: 6px;
+  padding: 13px 14px;
+  color: #1f2b29;
+  background: #fbfdfc;
+  outline: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+input:focus {
+  border-color: #9b4f45;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(155, 79, 69, 0.13);
+}
+
+.examples {
+  margin: 10px 0 18px;
+  color: #65716f;
+  font-size: 0.84rem;
+  line-height: 1.5;
 }
 
 button {

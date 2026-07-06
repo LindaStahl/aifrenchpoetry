@@ -1,5 +1,6 @@
 const poemElement = document.querySelector("#poem");
 const submitButton = document.querySelector("#poem-generator-form button");
+const topicInput = document.querySelector("#topic");
 const apiKey = "8c50bt322daeoeaf091b2f13c5a404ce";
 
 function displayPoem(response) {
@@ -27,14 +28,17 @@ function displayError() {
 function generatePoem(event) {
   event.preventDefault();
 
+  let topic = topicInput.value.trim();
   poemElement.classList.remove("placeholder");
   poemElement.classList.add("loading");
-  poemElement.innerHTML =
-    '<span class="loader"></span><span>Composing your French poem...</span>';
+  poemElement.innerHTML = '<span class="loader"></span>';
+  let loadingText = document.createElement("span");
+  loadingText.textContent = `Composing a French poem about ${topic}...`;
+  poemElement.appendChild(loadingText);
   submitButton.disabled = true;
   submitButton.innerHTML = "Generating...";
 
-  let prompt = "Generate a short French poem in 4 lines.";
+  let prompt = `Generate a short French poem in 4 lines about ${topic}.`;
   let context =
     "You are a romantic French poet. Return only the poem text. Separate each line with a <br /> tag. Do not include a title or explanation.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${encodeURIComponent(

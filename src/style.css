@@ -71,7 +71,7 @@ h1 {
 }
 
 form,
-.poem-output {
+.recipe-output {
   border: 1px solid rgba(36, 49, 47, 0.14);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.92);
@@ -169,7 +169,7 @@ button:disabled {
   transform: none;
 }
 
-.poem-output {
+.recipe-output {
   min-height: 520px;
   padding: 32px;
 }
@@ -183,7 +183,7 @@ button:disabled {
   text-transform: uppercase;
 }
 
-#poem {
+#recipe {
   color: #20312e;
   font-size: 1.25rem;
   line-height: 1.8;
@@ -244,14 +244,14 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .poem-output {
+  .recipe-output {
     min-height: 360px;
   }
 }
 
 @media (max-width: 560px) {
   form,
-  .poem-output {
+  .recipe-output {
     padding: 22px;
   }
 }

@@ -1,7 +1,11 @@
 const poemElement = document.querySelector("#poem");
+const submitButton = document.querySelector("#poem-generator-form button");
 const apiKey = "8c50bt322daeoeaf091b2f13c5a404ce";
 
 function displayPoem(response) {
+  submitButton.disabled = false;
+  submitButton.innerHTML = "Generate poem";
+  poemElement.classList.remove("loading");
   poemElement.innerHTML = "";
 
   new Typewriter("#poem", {
@@ -13,6 +17,9 @@ function displayPoem(response) {
 }
 
 function displayError() {
+  submitButton.disabled = false;
+  submitButton.innerHTML = "Generate poem";
+  poemElement.classList.remove("loading");
   poemElement.innerHTML =
     "Sorry, the poem could not be generated right now. Please try again.";
 }
@@ -21,7 +28,11 @@ function generatePoem(event) {
   event.preventDefault();
 
   poemElement.classList.remove("placeholder");
-  poemElement.innerHTML = "Generating a French poem...";
+  poemElement.classList.add("loading");
+  poemElement.innerHTML =
+    '<span class="loader"></span><span>Composing your French poem...</span>';
+  submitButton.disabled = true;
+  submitButton.innerHTML = "Generating...";
 
   let prompt = "Generate a short French poem in 4 lines.";
   let context =

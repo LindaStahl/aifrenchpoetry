@@ -125,6 +125,12 @@ button:hover {
   transform: translateY(-1px);
 }
 
+button:disabled {
+  background: #b98780;
+  cursor: wait;
+  transform: none;
+}
+
 .poem-output {
   min-height: 520px;
   padding: 32px;
@@ -149,6 +155,31 @@ button:hover {
 .placeholder {
   color: #65716f;
   font-size: 1rem;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #65716f;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(155, 79, 69, 0.2);
+  border-top-color: #9b4f45;
+  border-radius: 50%;
+  animation: spin 800ms linear infinite;
+  flex: 0 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 footer {

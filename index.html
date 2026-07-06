@@ -3,25 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>AI Poem Generator</title>
   </head>
   <body>
-    <h1>Welcome to the AI French Poem Generator</h1>
+    <div class="page-shell">
+      <header>
+        <p class="eyebrow">Atelier de poesie</p>
+        <h1>AI French Poem Generator</h1>
+        <p class="intro">
+          Choose a theme, mood, and style to compose a short French poem with
+          an English translation.
+        </p>
+      </header>
 
-    <footer>
-      This AI project was coded by
-      <a href="https://github.com/LindaStahl" target="_blank">Linda Stahl</a>
-      and is
-      <a href="https://github.com/LindaStahl/aifrenchpoetry" target="_blank">
-        open-sourced on GitHub</a
-      >
-      and is
-      <a href="https://aifrenchpoetry.netlify.app/" target="_blank"
-        >hosted on Netlify</a
-      >.
-    </footer>
+      <main>
+        <section class="generator-panel" aria-labelledby="form-title">
+          <form id="poem-form">
+            <div class="form-heading">
+              <h2 id="form-title">Create a poem</h2>
+              <p>Tell the generator what kind of French verse you want.</p>
+            </div>
 
-    <script src="src/index.js"></script>
+            <label for="topic">Theme</label>
+            <input
+              id="topic"
+              name="topic"
+              type="text"
+              placeholder="Paris at midnight, spring rain, first love..."
+              required
+            />
+
+            <div class="form-grid">
+              <div>
+                <label for="mood">Mood</label>
+                <select id="mood" name="mood">
+                  <option value="romantic">Romantic</option>
+                  <option value="melancholic">Melancholic</option>
+                  <option value="joyful">Joyful</option>
+                  <option value="mysterious">Mysterious</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="style">Style</label>
+                <select id="style" name="style">
+                  <option value="classic">Classic</option>
+                  <option value="modern">Modern</option>
+                  <option value="haiku">Haiku</option>
+                  <option value="free verse">Free verse</option>
+                </select>
+              </div>
+            </div>
+
+            <label for="details">Optional details</label>
+            <textarea
+              id="details"
+              name="details"
+              rows="4"
+              placeholder="Add an image, season, person, place, or feeling to include."
+            ></textarea>
+
+            <button type="submit">Generate poem</button>
+          </form>
+
+          <article class="poem-output" aria-live="polite">
+            <p class="output-label">Generated poem</p>
+            <div id="poem-result" class="placeholder">
+              Your French poem will appear here.
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer>
+        This AI project was coded by
+        <a href="https://github.com/LindaStahl" target="_blank">Linda Stahl</a>
+        and is
+        <a href="https://github.com/LindaStahl/aifrenchpoetry" target="_blank">
+          open-sourced on GitHub</a
+        >
+        and is
+        <a href="https://aifrenchpoetry.netlify.app/" target="_blank"
+          >hosted on Netlify</a
+        >.
+      </footer>
+    </div>
+
+    <script src="index.js"></script>
   </body>
 </html>

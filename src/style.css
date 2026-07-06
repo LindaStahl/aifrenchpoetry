@@ -5,9 +5,10 @@
 body {
   margin: 0;
   min-height: 100vh;
-  color: #24312f;
+  color: #493f4f;
   background:
-    linear-gradient(rgba(255, 250, 243, 0.78), rgba(255, 255, 255, 0.9)),
+    linear-gradient(135deg, rgba(255, 236, 242, 0.88), rgba(236, 249, 242, 0.88)),
+    linear-gradient(rgba(255, 251, 246, 0.72), rgba(255, 255, 255, 0.9)),
     url("https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1800&q=80")
       center/cover fixed;
   font-family:
@@ -30,11 +31,12 @@ input {
 header {
   max-width: 760px;
   margin-bottom: 28px;
+  padding: 4px 0;
 }
 
 .eyebrow {
   margin: 0 0 10px;
-  color: #9b4f45;
+  color: #c96c8b;
   font-family: Arial, sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
@@ -50,14 +52,14 @@ p {
 
 h1 {
   margin-bottom: 14px;
-  color: #182825;
+  color: #55415f;
   font-size: clamp(2.4rem, 7vw, 5rem);
   line-height: 0.95;
 }
 
 .intro {
   max-width: 620px;
-  color: #455755;
+  color: #6b6070;
   font-family: Arial, sans-serif;
   font-size: 1.08rem;
   line-height: 1.6;
@@ -72,14 +74,17 @@ h1 {
 
 form,
 .recipe-output {
-  border: 1px solid rgba(36, 49, 47, 0.14);
+  border: 1px solid rgba(201, 108, 139, 0.18);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 22px 70px rgba(24, 40, 37, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 250, 253, 0.94)),
+    linear-gradient(135deg, rgba(255, 214, 228, 0.32), rgba(203, 239, 221, 0.28));
+  box-shadow: 0 22px 60px rgba(117, 88, 103, 0.18);
 }
 
 form {
   padding: 28px;
+  border-top: 6px solid #ffd6e4;
 }
 
 .form-heading {
@@ -88,7 +93,7 @@ form {
 
 h2 {
   margin-bottom: 6px;
-  color: #182825;
+  color: #55415f;
   font-size: 1.65rem;
 }
 
@@ -103,25 +108,25 @@ footer,
 
 .form-heading p {
   margin-bottom: 0;
-  color: #65716f;
+  color: #7b7180;
   line-height: 1.45;
 }
 
 label {
   display: block;
   margin-bottom: 8px;
-  color: #2f403d;
+  color: #5f5268;
   font-size: 0.88rem;
   font-weight: 700;
 }
 
 input {
   width: 100%;
-  border: 1px solid #cfd8d5;
+  border: 1px solid #ead4df;
   border-radius: 6px;
   padding: 13px 14px;
-  color: #1f2b29;
-  background: #fbfdfc;
+  color: #493f4f;
+  background: #fffafb;
   outline: none;
   transition:
     border-color 160ms ease,
@@ -130,14 +135,14 @@ input {
 }
 
 input:focus {
-  border-color: #9b4f45;
+  border-color: #f2a7c0;
   background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(155, 79, 69, 0.13);
+  box-shadow: 0 0 0 4px rgba(242, 167, 192, 0.22);
 }
 
 .examples {
   margin: 10px 0 18px;
-  color: #65716f;
+  color: #8a7f8d;
   font-size: 0.84rem;
   line-height: 1.5;
 }
@@ -148,8 +153,8 @@ button {
   margin-top: 10px;
   border: 0;
   border-radius: 6px;
-  color: #ffffff;
-  background: #9b4f45;
+  color: #493146;
+  background: linear-gradient(135deg, #ffd6e4, #cbeedd);
   font-family: Arial, sans-serif;
   font-weight: 700;
   cursor: pointer;
@@ -159,12 +164,13 @@ button {
 }
 
 button:hover {
-  background: #7d3e36;
+  background: linear-gradient(135deg, #ffc4d8, #b7e7d0);
   transform: translateY(-1px);
 }
 
 button:disabled {
-  background: #b98780;
+  color: #8a7482;
+  background: #f1dce4;
   cursor: wait;
   transform: none;
 }
@@ -172,11 +178,12 @@ button:disabled {
 .recipe-output {
   min-height: 520px;
   padding: 32px;
+  border-top: 6px solid #cbeedd;
 }
 
 .output-label {
   margin-bottom: 18px;
-  color: #9b4f45;
+  color: #c96c8b;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -184,14 +191,14 @@ button:disabled {
 }
 
 #recipe {
-  color: #20312e;
+  color: #493f4f;
   font-size: 1.25rem;
   line-height: 1.8;
   white-space: pre-line;
 }
 
 .placeholder {
-  color: #65716f;
+  color: #8a7f8d;
   font-size: 1rem;
 }
 
@@ -199,7 +206,7 @@ button:disabled {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #65716f;
+  color: #8a7f8d;
   font-family: Arial, sans-serif;
   font-size: 1rem;
 }
@@ -207,8 +214,8 @@ button:disabled {
 .loader {
   width: 18px;
   height: 18px;
-  border: 3px solid rgba(155, 79, 69, 0.2);
-  border-top-color: #9b4f45;
+  border: 3px solid rgba(201, 108, 139, 0.2);
+  border-top-color: #c96c8b;
   border-radius: 50%;
   animation: spin 800ms linear infinite;
   flex: 0 0 auto;
@@ -223,14 +230,14 @@ button:disabled {
 footer {
   max-width: 780px;
   margin: 32px auto 0;
-  color: #455755;
+  color: #6b6070;
   font-size: 0.9rem;
   line-height: 1.7;
   text-align: center;
 }
 
 a {
-  color: #8b443c;
+  color: #b95f7c;
   font-weight: 700;
 }
 

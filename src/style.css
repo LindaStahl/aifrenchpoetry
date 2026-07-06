@@ -7,8 +7,8 @@ body {
   min-height: 100vh;
   color: #24312f;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.9)),
-    url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1800&q=80")
+    linear-gradient(rgba(255, 250, 243, 0.78), rgba(255, 255, 255, 0.9)),
+    url("https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1800&q=80")
       center/cover fixed;
   font-family:
     Georgia,
